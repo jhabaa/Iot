@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./static/css.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.1/socket.io.js" integrity="sha512-MgkNs0gNdrnOM7k+0L+wgiRc5aLgl74sJQKbIWegVIMvVGPc1+gc1L2oK9Wf/D9pq58eqIJAxOonYPVE5UwUFA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r119/three.min.js" integrity="sha512-E1+SnTWyHYoY5MN8wpL0SI4TYbpWN12sHXyEViwbzzEyq6GHxQrPFDzEeUDab4emXcf3Yj41Tht2JZnpo3kjwA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.22/vanta.globe.min.js" integrity="sha512-6JvDy4tHImgkYITiN8DXdIRPsdEoAJ9zJpiQGlVD4DfWMZqPEky02QZuwT36IAmu15zMMe/oCHp75w2OpXokGA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js" integrity="sha256-+8RZJua0aEWg+QVVKg4LEzEEm/8RFez5Tb4JBNiV5xA=" crossorigin="anonymous"></script>
+        <script>
+            var socket = io();
+        </script>
+    </head>
+    <body id="body">
+        
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <section class="container" id="container">
+            <div class="header">
+                <h1>IoT Project</h1>
+            </div>
+           <div class="makers">
+            <span>Jean Hubert ABA'A</span>
+           </div>
+        </section>
+        
+        <section class="cards">
+            <div class="card">
+                <h3 class="title" id="title">Temperature (celcius)</h3>
+                <div class="val" id="temperature">
+                    <div class="numb" id="temperatureVal"></div>
+                </div>
+                <canvas id="tempChart"></canvas>
+            </div>
+            <div class="card">
+                <h3 class="title" id="title">Humidity (Geau/m3)</h3>
+                <div class="val" id="humitidy">
+                    <div class="numb"id="humidityVal">37</div>
+                </div>
+                <canvas id="humChart"></canvas>
+            </div>
+            <div class="card">
+                <h3 class="title" id="title">Luminosity (lux)</h3>
+                <div class="val" id="luminosity">
+                    <div class="numb" id="luminosityVal">37</div>
+                </div>
+                <canvas id="lumChart"></canvas>
+            </div>
+            <div class="card">
+                <h3 class="title" id="title">Input Voltage (Volts)</h3>
+                <div class="val" id="voltage">
+                    <div class="numb" id="voltageVal">37</div>
+                </div>
+                <canvas id="volChart"></canvas>
+            </div>
+
+            
+        </section>
+        <!--Action pour le capteur de vibrations l'écran clignote quand on tapote-->
+        <section class="vibration" id="vibration"></section>
+        <script src="/static/js.js" async defer></script>
+        <script src="/static/anime.min.js" async defer></script>
+    </body>
+</html>

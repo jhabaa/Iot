@@ -1,0 +1,117 @@
+  /* Fonction qui recupère un font google */
+  @mixin google-font($family) {
+    @import url("http://fonts.googleapis.com/css?family=#{$family}");
+}
+  @include google-font("Montserrat");
+  @include google-font("Raleway");
+  @include google-font("Ubuntu");
+  @include google-font("Marcellus SC");
+
+*{
+
+    font-family: "Ubuntu";
+}
+body{
+    
+    
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 0px;
+    overflow: hidden;
+    
+    .container{
+        position:  relative;
+        //background: rgb(255,255,255);
+        //background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 58%, rgba(0,212,255,0.5340511204481793) 100%);
+        color: black;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 0;
+        //align-items: center;
+        z-index: 4000;
+        .header{
+            font-size: 7vw;
+    
+            mix-blend-mode: difference;
+            text-shadow: 10px 10px 10px gray;
+            
+            padding: 0;
+            margin: 0;
+        }
+        .makers{
+            position: fixed;
+            width: 100%;
+
+            margin: 10px;
+            padding: 10px;
+            display: flex;
+            font-size: 2vw;
+            align-items: center;
+            justify-content: space-around;
+            justify-content: space-between;
+            z-index: 1000;
+
+        }
+    }
+    // Cartes
+    .cards{
+        display: flex;
+        gap: 10px;
+        margin: 20px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 100px;
+        position: relative;
+        align-items: center;
+        z-index: 200;
+        .card{
+            z-index: 200;
+            width: 300px;
+            height: 400px;
+            background-color: rgba(193, 196, 196, 0.122);
+            border-radius: 2rem;
+            overflow: hidden;
+            color: rgb(0, 82, 154);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            -webkit-backdrop-filter: blur(1.1rem);
+            backdrop-filter: blur(1.1rem);
+            box-shadow: 2px 2px 20px black;
+            .val{
+                height: 200px;
+                width: 200px;
+                background-color: rgb(0, 51, 96);
+                border-radius: 100%;
+                background: transparent;
+                border-style: solid;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                text-overflow: clip;
+                transition: all 0.5s ease-in-out;
+                font-size: 40px;
+                .numb{
+                    
+                    position: absolute;
+                    font-size: 40px;
+                    transition: all 0.4s ease-in-out;
+
+                }
+
+            }
+
+        }
+    }
+
+    .vibration{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.837);
+        opacity: 0.0;
+    }
+}

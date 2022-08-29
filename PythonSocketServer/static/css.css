@@ -1,0 +1,100 @@
+@charset "UTF-8";
+/* Fonction qui recupère un font google */
+@import url("http://fonts.googleapis.com/css?family=Montserrat");
+@import url("http://fonts.googleapis.com/css?family=Raleway");
+@import url("http://fonts.googleapis.com/css?family=Ubuntu");
+@import url("http://fonts.googleapis.com/css?family=Marcellus SC");
+* {
+  font-family: "Ubuntu";
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 0px;
+  overflow: hidden;
+}
+body .container {
+  position: relative;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 0;
+  z-index: 4000;
+}
+body .container .header {
+  font-size: 7vw;
+  mix-blend-mode: difference;
+  text-shadow: 10px 10px 10px gray;
+  padding: 0;
+  margin: 0;
+}
+body .container .makers {
+  position: fixed;
+  width: 100%;
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  font-size: 2vw;
+  align-items: center;
+  justify-content: space-around;
+  justify-content: space-between;
+  z-index: 1000;
+}
+body .cards {
+  display: flex;
+  gap: 10px;
+  margin: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 100px;
+  position: relative;
+  align-items: center;
+  z-index: 200;
+}
+body .cards .card {
+  z-index: 200;
+  width: 300px;
+  height: 400px;
+  background-color: rgba(193, 196, 196, 0.122);
+  border-radius: 2rem;
+  overflow: hidden;
+  color: #00529a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  -webkit-backdrop-filter: blur(1.1rem);
+  backdrop-filter: blur(1.1rem);
+  box-shadow: 2px 2px 20px black;
+}
+body .cards .card .val {
+  height: 200px;
+  width: 200px;
+  background-color: #003360;
+  border-radius: 100%;
+  background: transparent;
+  border-style: solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-overflow: clip;
+  transition: all 0.5s ease-in-out;
+  font-size: 40px;
+}
+body .cards .card .val .numb {
+  position: absolute;
+  font-size: 40px;
+  transition: all 0.4s ease-in-out;
+}
+body .vibration {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.837);
+  opacity: 0;
+}
+
+/*# sourceMappingURL=css.css.map */
